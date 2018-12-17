@@ -16,7 +16,7 @@ public class JsonPlaceHolderSteps {
 
     @Then("^Then user (.*) should have (\\d+) posts$")
     public void i_should_login(String userId, int numpost) {
-        jsonPlaceHolder.getUsersPost(userId, numpost);
+        jsonPlaceHolder.getUsersPostAndValidateCount(userId, numpost);
     }
 
     @Then("^each blog post should have a unique ID$")

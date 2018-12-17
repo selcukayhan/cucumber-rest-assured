@@ -26,7 +26,7 @@ public class JsonPlaceHolder {
         //System.out.println("response: " + response.prettyPrint());
     }
 
-    public void getUsersPost(String userId, int postsCount) {
+    public void getUsersPostAndValidateCount(String userId, int postsCount) {
         List<String> userIds = response.jsonPath().get("findAll { it.userId == " + userId + " }");
 
         Assert.assertEquals(postsCount, userIds.size());
